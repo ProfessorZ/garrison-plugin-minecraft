@@ -1,0 +1,15 @@
+{
+  "id": "minecraft",
+  "name": "garrison-plugin-minecraft",
+  "version": "1.0.0",
+  "display_name": "Minecraft",
+  "description": "RCON plugin for Minecraft Java Edition dedicated servers",
+  "author": "Garrison",
+  "repo": "https://github.com/ProfessorZ/garrison-plugin-minecraft",
+  "garrison_api": "1",
+  "default_ports": {
+    "game": 25565,
+    "rcon": 25575
+  },
+  "icon": "\u26cf\ufe0f"
+}
