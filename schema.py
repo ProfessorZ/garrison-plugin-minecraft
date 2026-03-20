@@ -631,4 +631,41 @@ def get_commands():
             category="DATA",
             example="waypoint add home 0 64 0",
         ),
+        CommandDef(
+            name="help",
+            description="Show command help",
+            category="UTILITY",
+            params=[CommandParam(name="command", type="string", required=False, description="Command to get help for")],
+            example="help kick",
+        ),
+        CommandDef(
+            name="teleport",
+            description="Teleport entities to a location or player (alias: tp)",
+            category="WORLD",
+            params=[
+                CommandParam(name="target", type="string", description="Entity or player to teleport"),
+                CommandParam(name="destination", type="string", description="Destination player or coordinates"),
+            ],
+            example="teleport Steve Alex",
+        ),
+        CommandDef(
+            name="time",
+            description="Query or change world time",
+            category="WORLD",
+            params=[
+                CommandParam(name="action", type="string", description="set/add/query"),
+                CommandParam(name="value", type="string", required=False, description="day/night/noon/midnight/number"),
+            ],
+            example="time set day",
+        ),
+        CommandDef(
+            name="whitelist",
+            description="Manage the server whitelist",
+            category="MODERATION",
+            params=[
+                CommandParam(name="action", type="string", description="on/off/list/add/remove/reload"),
+                CommandParam(name="player", type="string", required=False, description="Player name (for add/remove)"),
+            ],
+            example="whitelist add Steve",
+        ),
     ]
