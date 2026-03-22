@@ -77,3 +77,13 @@ class MinecraftPlugin(GamePlugin):
 
     async def unban_player(self, send_command, name: str) -> str:
         return await send_command(f"pardon {name}")
+
+    async def get_player_roles(self) -> list[str]:
+        return ["op"]
+
+    async def promote_player(self, send_command, player: str, role: str) -> str:
+        return await send_command(f"op {player}")
+
+    async def demote_player(self, send_command, player: str) -> str:
+        return await send_command(f"deop {player}")
+
